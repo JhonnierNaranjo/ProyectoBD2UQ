@@ -20,6 +20,59 @@
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
                   </content>
                 </Tab>
+                  <Tab text="PaqueteAuto">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="383.0" layoutY="51.0" text="PaqueteAuto" />
+                              <Label layoutX="207.0" layoutY="108.0" text="idPaqueteT" />
+                              <Label layoutX="486.0" layoutY="108.0" text="idAutomovil" />
+                              <Label layoutX="201.0" layoutY="144.0" text="ciudadPickUp" />
+                              <Label layoutX="486.0" layoutY="144.0" text="fechaPickUp" />
+                              <Label layoutX="207.0" layoutY="174.0" text="fechaEntrega" />
+                              <Label layoutX="486.0" layoutY="174.0" text="precioDiaRetraso" />
+                              <Label layoutX="207.0" layoutY="207.0" text="precioDia" />
+                              <Label layoutX="486.0" layoutY="207.0" text="adquiereSeguro" />
+                              <Label layoutX="201.0" layoutY="241.0" text="adquiereGPS" />
+                              <Label layoutX="486.0" layoutY="241.0" text="descuentoGeneral" />
+                              <Button fx:id="btn_PaqueteAutoCrear" layoutX="236.0" layoutY="328.0" mnemonicParsing="false" onAction="#PaqueteAutoCrear" text="Crear" />
+                              <Button fx:id="btn_PaqueteAutoBuscar" layoutX="331.0" layoutY="328.0" mnemonicParsing="false" onAction="#PaqueteAutoBuscar" text="Buscar" />
+                              <Button fx:id="btn_PaqueteAutoActualizar" layoutX="453.0" layoutY="328.0" mnemonicParsing="false" onAction="#PaqueteAutoActualizar" text="Actualizar" />
+                              <Button fx:id="btn_PaqueteAutoEliminar" layoutX="576.0" layoutY="328.0" mnemonicParsing="false" onAction="#PaqueteAutoEliminar" text="Eliminar" />
+                              <TextField fx:id="txt_PaqueteAutoPaqueteId" layoutX="309.0" layoutY="104.0" />
+                              <TextField fx:id="txt_PaqueteAutoCiudadPickUp" layoutX="309.0" layoutY="140.0" />
+                              <TextField fx:id="txt_PaqueteAutoFechaEntrega" layoutX="309.0" layoutY="170.0" />
+                              <TextField fx:id="txt_PaqueteAutoPreciaDia" layoutX="310.0" layoutY="203.0" />
+                              <TextField fx:id="txt_PaqueteAutoAsquiereGPS" layoutX="309.0" layoutY="237.0" />
+                              <TextField fx:id="txt_PaqueteAutoAutoId" layoutX="622.0" layoutY="104.0" />
+                              <TextField fx:id="txt_PaqueteAutoFechaPickUp" layoutX="623.0" layoutY="140.0" />
+                              <TextField fx:id="txt_PaqueteAutoPRecioDiaRetraso" layoutX="623.0" layoutY="170.0" />
+                              <TextField fx:id="txt_PaqueteAutoAsquiereSeguro" layoutX="624.0" layoutY="203.0" />
+                              <TextField fx:id="txt_PaqueteAutoDescuentoGeneral" layoutX="623.0" layoutY="237.0" />
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="Paquete Destino">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="404.0" layoutY="60.0" text="PaqueteDestino" />
+                              <Label layoutX="181.0" layoutY="124.0" text="idPaqueteT" />
+                              <Label layoutX="508.0" layoutY="124.0" text="idDestino" />
+                              <Label layoutX="183.0" layoutY="173.0" text="fechaInicio" />
+                              <Label layoutX="516.0" layoutY="173.0" text="fechafin" />
+                              <Button fx:id="btn_PaqueteDestinoBuscar" layoutX="331.0" layoutY="249.0" mnemonicParsing="false" onAction="#PaqueteDestinoBuscar" text="Buscar" />
+                              <Button fx:id="btn_PaqueteDestinoEliminar" layoutX="532.0" layoutY="249.0" mnemonicParsing="false" onAction="#PaqueteDestinoEliminar" text="Eliminar" />
+                              <Button fx:id="btn_PaqueteDestinoCrear" layoutX="224.0" layoutY="249.0" mnemonicParsing="false" onAction="#PaqueteDestinoCrear" text="Crear" />
+                              <Button fx:id="btn_PaqueteDestinoActualizar" layoutX="420.0" layoutY="249.0" mnemonicParsing="false" onAction="#PaqueteDestinoActualizar" text="Actualizar" />
+                              <TextField fx:id="txt_PaqueteDestinoid" layoutX="283.0" layoutY="120.0" />
+                              <TextField fx:id="txt_PaqueteDestinoDestinaid" layoutX="611.0" layoutY="120.0" />
+                              <TextField fx:id="txt_PaqueteDestinoFechaini" layoutX="283.0" layoutY="169.0" />
+                              <TextField fx:id="txt_PaqueteDestinoFechaFin" layoutX="612.0" layoutY="169.0" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
                 <Tab text="CATEGORIA">
                   <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
@@ -185,6 +238,31 @@
                            </children></AnchorPane>
                     </content>
                   </Tab>
+                  <Tab text="PaqueteTuristicoHabitacion">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="345.0" layoutY="53.0" text="PaqueteTuristicoHabitacion" />
+                              <Label layoutX="143.0" layoutY="120.0" text="idPaqueteT" />
+                              <Label layoutX="491.0" layoutY="120.0" text="idHabitacion" />
+                              <Label layoutX="143.0" layoutY="158.0" text="fechaInicio" />
+                              <Label layoutX="491.0" layoutY="158.0" text="fechaFin" />
+                              <Label layoutX="141.0" layoutY="193.0" text="descripcion" />
+                              <Label layoutX="491.0" layoutY="193.0" text="regimen" />
+                              <Button fx:id="btn_PaqueteTuristicoHabitacionCrear" layoutX="203.0" layoutY="253.0" mnemonicParsing="false" onAction="#PaqueteTuristicoHabitacionCrear" text="Crear" />
+                              <Button fx:id="btn_PaqueteTuristicoHabitacionBuscar" layoutX="345.0" layoutY="253.0" mnemonicParsing="false" onAction="#PaqueteTuristicoHabitacionBuscar" text="Buscar" />
+                              <Button fx:id="btn_PaqueteTuristicoHabitacionActualizar" layoutX="487.0" layoutY="253.0" mnemonicParsing="false" onAction="#PaqueteTuristicoHabitacionActualizar" text="Actualizar" />
+                              <Button fx:id="btn_PaqueteTuristicoHabitacionEliminar" layoutX="629.0" layoutY="253.0" mnemonicParsing="false" onAction="#PaqueteTuristicoHabitacionEliminar" text="Eliminar" />
+                              <TextField fx:id="txt_PaqueteTuristicoHabitacionId" layoutX="248.0" layoutY="116.0" />
+                              <TextField fx:id="txt_PaqueteTuristicoHabitacionFechaInicio" layoutX="249.0" layoutY="154.0" />
+                              <TextField fx:id="txt_PaqueteTuristicoHabitacionDescripcion" layoutX="249.0" layoutY="189.0" />
+                              <TextField fx:id="txt_PaqueteTuristicoHabitacionHabitacionId" layoutX="613.0" layoutY="116.0" />
+                              <TextField fx:id="txt_PaqueteTuristicoHabitacionFechaFin" layoutX="613.0" layoutY="154.0" />
+                              <TextField fx:id="txt_PaqueteTuristicoHabitacionRegimen" layoutX="613.0" layoutY="189.0" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
                   <Tab text="POLITICAS HOSPEDAJE">
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
@@ -279,6 +357,21 @@
                               <TextField fx:id="txt_AutomovilGama" layoutX="617.0" layoutY="249.0" />
                               <TextField fx:id="txt_AutomovilFechaCreacion" layoutX="614.0" layoutY="280.0" />
                            </children></AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="Hospedaje Intalacion">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="390.0" layoutY="58.0" text="Hospedaje Instalacion" />
+                              <Label layoutX="216.0" layoutY="117.0" text="Instalacion" />
+                              <Label layoutX="507.0" layoutY="117.0" text="Hospedaje" />
+                              <Button fx:id="btn_HospedajeIntalacionCrear" layoutX="314.0" layoutY="216.0" mnemonicParsing="false" onAction="#HospedajeIntalacionCrear" text="Crear" />
+                              <Button fx:id="btn_HospedajeIntalacionEliminar" layoutX="470.0" layoutY="216.0" mnemonicParsing="false" onAction="#HospedajeIntalacionEliminar" text="Eliminar" />
+                              <TextField fx:id="txt_HospedajeIntalacionid" layoutX="300.0" layoutY="113.0" />
+                              <TextField fx:id="txt_hospedajeInstalacionidHospedaje" layoutX="600.0" layoutY="113.0" />
+                           </children>
+                        </AnchorPane>
                     </content>
                   </Tab>
                   <Tab text="PAQUETE TURISTICO">

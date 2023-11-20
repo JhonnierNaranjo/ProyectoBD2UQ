@@ -43,7 +43,6 @@ public class EmpresaControler {
     @FXML
     private ComboBox<Categoria> cbox_categoriaPadre;
     
-
     @FXML
     private Button btnCategoriaActualizar;
 
@@ -61,6 +60,18 @@ public class EmpresaControler {
 
     @FXML
     private Button btn_ActualizarHospedaje;
+
+    @FXML
+    private Button btn_ArticuloCategoriaActualizar;
+
+    @FXML
+    private Button btn_ArticuloCategoriaBuscar;
+
+    @FXML
+    private Button btn_ArticuloCategoriaCrear;
+
+    @FXML
+    private Button btn_ArticuloCategoriaEliminar;
 
     @FXML
     private Button btn_AutomovilActualizar;
@@ -84,7 +95,37 @@ public class EmpresaControler {
     private Button btn_DestinoCrear;
 
     @FXML
+    private Button btn_HospedajeIntalacionCrear;
+
+    @FXML
+    private Button btn_HospedajeIntalacionEliminar;
+
+    @FXML
     private Button btn_InstalacvionCrear;
+
+    @FXML
+    private Button btn_PaqueteAutoActualizar;
+
+    @FXML
+    private Button btn_PaqueteAutoBuscar;
+
+    @FXML
+    private Button btn_PaqueteAutoCrear;
+
+    @FXML
+    private Button btn_PaqueteAutoEliminar;
+
+    @FXML
+    private Button btn_PaqueteDestinoActualizar;
+
+    @FXML
+    private Button btn_PaqueteDestinoBuscar;
+
+    @FXML
+    private Button btn_PaqueteDestinoCrear;
+
+    @FXML
+    private Button btn_PaqueteDestinoEliminar;
 
     @FXML
     private Button btn_PaqueteTuristicoActualizar;
@@ -97,6 +138,18 @@ public class EmpresaControler {
 
     @FXML
     private Button btn_PaqueteTuristicoEliminar;
+
+    @FXML
+    private Button btn_PaqueteTuristicoHabitacionActualizar;
+
+    @FXML
+    private Button btn_PaqueteTuristicoHabitacionBuscar;
+
+    @FXML
+    private Button btn_PaqueteTuristicoHabitacionCrear;
+
+    @FXML
+    private Button btn_PaqueteTuristicoHabitacionEliminar;
 
     @FXML
     private Button btn_articuloActualizar;
@@ -189,6 +242,18 @@ public class EmpresaControler {
     private Button btn_politicasHospedajeEliminar;
 
     @FXML
+    private TextField txt_ArticuloCategoriArticuloID;
+
+    @FXML
+    private TextField txt_ArticuloCategoriaCalificacion;
+
+    @FXML
+    private TextField txt_ArticuloCategoriaDescripcion;
+
+    @FXML
+    private TextField txt_ArticuloCategoriaId;
+
+    @FXML
     private TextField txt_ArticuloMarca;
 
     @FXML
@@ -246,6 +311,51 @@ public class EmpresaControler {
     private TextField txt_HabitacionidHospedaje;
 
     @FXML
+    private TextField txt_HospedajeIntalacionid;
+
+    @FXML
+    private TextField txt_PaqueteAutoAsquiereGPS;
+
+    @FXML
+    private TextField txt_PaqueteAutoAsquiereSeguro;
+
+    @FXML
+    private TextField txt_PaqueteAutoAutoId;
+
+    @FXML
+    private TextField txt_PaqueteAutoCiudadPickUp;
+
+    @FXML
+    private TextField txt_PaqueteAutoDescuentoGeneral;
+
+    @FXML
+    private TextField txt_PaqueteAutoFechaEntrega;
+
+    @FXML
+    private TextField txt_PaqueteAutoFechaPickUp;
+
+    @FXML
+    private TextField txt_PaqueteAutoPRecioDiaRetraso;
+
+    @FXML
+    private TextField txt_PaqueteAutoPaqueteId;
+
+    @FXML
+    private TextField txt_PaqueteAutoPreciaDia;
+
+    @FXML
+    private TextField txt_PaqueteDestinoDestinaid;
+
+    @FXML
+    private TextField txt_PaqueteDestinoFechaFin;
+
+    @FXML
+    private TextField txt_PaqueteDestinoFechaini;
+
+    @FXML
+    private TextField txt_PaqueteDestinoid;
+
+    @FXML
     private TextField txt_PaqueteTuristicoCantidadUsu;
 
     @FXML
@@ -262,6 +372,24 @@ public class EmpresaControler {
 
     @FXML
     private TextField txt_PaqueteTuristicoFechafin;
+
+    @FXML
+    private TextField txt_PaqueteTuristicoHabitacionDescripcion;
+
+    @FXML
+    private TextField txt_PaqueteTuristicoHabitacionFechaFin;
+
+    @FXML
+    private TextField txt_PaqueteTuristicoHabitacionFechaInicio;
+
+    @FXML
+    private TextField txt_PaqueteTuristicoHabitacionHabitacionId;
+
+    @FXML
+    private TextField txt_PaqueteTuristicoHabitacionId;
+
+    @FXML
+    private TextField txt_PaqueteTuristicoHabitacionRegimen;
 
     @FXML
     private TextField txt_PaqueteTuristicoNombre;
@@ -354,6 +482,9 @@ public class EmpresaControler {
     private TextField txt_habitacionid;
 
     @FXML
+    private TextField txt_hospedajeInstalacionidHospedaje;
+
+    @FXML
     private TextField txt_hospedajeid;
 
     @FXML
@@ -415,6 +546,7 @@ public class EmpresaControler {
 
     @FXML
     private TextField txt_politicaPaqueteidpaquete;
+
 
     //***********************************************************************************************************************************************************************************************************************
     //***********************************************************************************************************************************************************************************************************************
@@ -1668,7 +1800,6 @@ public class EmpresaControler {
         }
     }
 
-   
     @FXML
     void PaqueteTuristicoActualizar(ActionEvent event) {
     	String sql = "UPDATE PaqueteTuristico SET nombrePT=?, duracion=?, precio=?, regimen=?, fechaInicio=?, fechafin=?, cantidadUsuario=?, descuentoGrupo=?, descuento=?, total=? WHERE idPaqueteT=?";
@@ -1722,8 +1853,452 @@ public class EmpresaControler {
     
     //***********************************************************************************************************************************************************************************************************************
     //***********************************************************************************************************************************************************************************************************************
+    //*********************HOSPEDAJE INSTALACION*******************************************************************************************************************************************************************************
+    //***********************************************************************************************************************************************************************************************************************
+    //***********************************************************************************************************************************************************************************************************************
+
+    @FXML
+    void HospedajeIntalacionCrear(ActionEvent event) {
+    	String sql = "INSERT INTO HospedajeInstalacion (idHospedaje, idInstalacion) VALUES (?, ?)";
+
+        try (PreparedStatement preparedStatement = con.prepareStatement(sql)) {
+            // Establecer los valores de los parámetros
+            preparedStatement.setInt(1, Integer.parseInt(txt_hospedajeInstalacionidHospedaje.getText()));
+            preparedStatement.setInt(2, Integer.parseInt(txt_HospedajeIntalacionid.getText()));
+
+            // Ejecutar la inserción
+            int filasAfectadas = preparedStatement.executeUpdate();
+
+            if (filasAfectadas > 0) {
+                System.out.println("Inserción exitosa");
+            } else {
+                System.out.println("La inserción no tuvo éxito");
+            }
+        } catch (SQLException | NumberFormatException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    void HospedajeIntalacionEliminar(ActionEvent event) {
+    	String sql = "DELETE FROM HospedajeInstalacion WHERE idHospedaje = ? AND idInstalacion = ?";
+
+        try (PreparedStatement preparedStatement = con.prepareStatement(sql)) {
+            // Establecer los valores de los parámetros
+            preparedStatement.setInt(1, Integer.parseInt(txt_hospedajeInstalacionidHospedaje.getText()));
+            preparedStatement.setInt(2, Integer.parseInt(txt_HospedajeIntalacionid.getText()));
+
+            // Ejecutar la eliminación
+            int filasAfectadas = preparedStatement.executeUpdate();
+
+            if (filasAfectadas > 0) {
+                System.out.println("Eliminación exitosa");
+            } else {
+                System.out.println("La eliminación no tuvo éxito");
+            }
+        } catch (SQLException | NumberFormatException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    //***********************************************************************************************************************************************************************************************************************
+    //***********************************************************************************************************************************************************************************************************************
+    //*************************** PAQUETE DESTINO *************************************************************************************************************************************************************************
+    //***********************************************************************************************************************************************************************************************************************
+    //***********************************************************************************************************************************************************************************************************************
+
+    @FXML
+    void PaqueteDestinoCrear(ActionEvent event) {
+    	String sql = "INSERT INTO PaqueteDestino (idPaqueteT, idDestino, fechaInicio, fechafin) VALUES (?, ?, ?, ?)";
+
+        try (PreparedStatement preparedStatement = con.prepareStatement(sql)) {
+            // Establecer los valores de los parámetros
+            preparedStatement.setInt(1, Integer.parseInt(txt_PaqueteDestinoid.getText()));
+            preparedStatement.setInt(2, Integer.parseInt(txt_PaqueteDestinoDestinaid.getText()));
+            preparedStatement.setDate(3, Date.valueOf(txt_PaqueteDestinoFechaini.getText()));
+            preparedStatement.setDate(4, Date.valueOf(txt_PaqueteDestinoFechaFin.getText()));
+
+            // Ejecutar la inserción
+            int filasAfectadas = preparedStatement.executeUpdate();
+
+            if (filasAfectadas > 0) {
+                System.out.println("Inserción exitosa");
+            } else {
+                System.out.println("La inserción no tuvo éxito");
+            }
+        } catch (SQLException | NumberFormatException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    @FXML
+    void PaqueteDestinoBuscar(ActionEvent event) {
+    	 String sql = "SELECT * FROM PaqueteDestino WHERE idPaqueteT=? AND idDestino=?";
+         try (PreparedStatement preparedStatement = con.prepareStatement(sql)) {
+             // Establecer los idPaqueteT e idDestino como parámetros
+             preparedStatement.setInt(1, Integer.parseInt(txt_PaqueteDestinoid.getText()));
+             preparedStatement.setInt(2, Integer.parseInt(txt_PaqueteDestinoDestinaid.getText()));
+
+             // Ejecutar la consulta
+             ResultSet resultSet = preparedStatement.executeQuery();
+
+             // Verificar si se encontró el paquete destino
+             if (resultSet.next()) {
+                 // Obtener los valores de las columnas
+                 Date fechaInicio = resultSet.getDate("fechaInicio");
+                 Date fechaFin = resultSet.getDate("fechafin");
+
+                 // Llenar los valores en campos (ajusta según tus necesidades)
+                 txt_PaqueteDestinoFechaini.setText(fechaInicio.toString());
+                 txt_PaqueteDestinoFechaFin.setText(fechaFin.toString());
+
+                 System.out.println("Paquete destino encontrado y valores llenados en campos.");
+             } else {
+                 System.out.println("Paquete destino no encontrado para los ID proporcionados.");
+             }
+         } catch (SQLException | NumberFormatException e) {
+             e.printStackTrace();
+         }
+    }
+
+    @FXML
+    void PaqueteDestinoActualizar(ActionEvent event) {
+    	String sql = "UPDATE PaqueteDestino SET fechaInicio=?, fechafin=? WHERE idPaqueteT=? AND idDestino=?";
+        try (PreparedStatement preparedStatement = con.prepareStatement(sql)) {
+            preparedStatement.setDate(1, java.sql.Date.valueOf(txt_PaqueteDestinoFechaini.getText()));
+            preparedStatement.setDate(2, java.sql.Date.valueOf(txt_PaqueteDestinoFechaFin.getText()));
+            preparedStatement.setInt(3, Integer.parseInt(txt_PaqueteDestinoid.getText()));
+            preparedStatement.setInt(4, Integer.parseInt(txt_PaqueteDestinoDestinaid.getText()));
+            int filasAfectadas = preparedStatement.executeUpdate();
+            if (filasAfectadas > 0) {
+                System.out.println("Actualización exitosa");
+            } else {
+                System.out.println("La actualización no tuvo éxito");
+            }
+        } catch (SQLException | NumberFormatException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    void PaqueteDestinoEliminar(ActionEvent event) {
+    	 String sql = "DELETE FROM PaqueteDestino WHERE idPaqueteT=? AND idDestino=?";
+         try (PreparedStatement preparedStatement = con.prepareStatement(sql)) {
+             preparedStatement.setInt(1, Integer.parseInt(txt_PaqueteDestinoid.getText()));
+             preparedStatement.setInt(2, Integer.parseInt(txt_PaqueteDestinoDestinaid.getText()));
+             int filasAfectadas = preparedStatement.executeUpdate();
+             if (filasAfectadas > 0) {
+                 System.out.println("Eliminación exitosa");
+             } else {
+                 System.out.println("La eliminación no tuvo éxito");
+             }
+         } catch (SQLException | NumberFormatException e) {
+             e.printStackTrace();
+         }
+    }
+
+    
+    //***********************************************************************************************************************************************************************************************************************
+    //***********************************************************************************************************************************************************************************************************************
+    //*******************************PaqueteAuto*********************************************************************************************************************************************************************
+    //***********************************************************************************************************************************************************************************************************************
+    //***********************************************************************************************************************************************************************************************************************
+
+    @FXML
+    void PaqueteAutoCrear(ActionEvent event) {
+    	String sql = "INSERT INTO PaqueteAuto (idPaqueteT, idAutomovil, ciudadPickUp, fechaPickUp, fechaEntrega, precioDiaRetraso, precioDia, adquiereSeguro, adquiereGPS, descuentoGeneral) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        try (PreparedStatement preparedStatement = con.prepareStatement(sql)) {
+            // Establecer los valores de los parámetros
+            preparedStatement.setInt(1, Integer.parseInt(txt_PaqueteAutoPaqueteId.getText()));
+            preparedStatement.setInt(2, Integer.parseInt(txt_PaqueteAutoAutoId.getText()));
+            preparedStatement.setString(3, txt_PaqueteAutoCiudadPickUp.getText());
+            preparedStatement.setDate(4, java.sql.Date.valueOf(txt_PaqueteAutoFechaPickUp.getText()));
+            preparedStatement.setDate(5, java.sql.Date.valueOf(txt_PaqueteAutoFechaEntrega.getText()));
+            preparedStatement.setDouble(6, Double.parseDouble(txt_PaqueteAutoPRecioDiaRetraso.getText()));
+            preparedStatement.setDouble(7, Double.parseDouble(txt_PaqueteAutoPreciaDia.getText()));
+            preparedStatement.setDouble(8, Double.parseDouble(txt_PaqueteAutoAsquiereSeguro.getText()));
+            preparedStatement.setDouble(9, Double.parseDouble(txt_PaqueteAutoAsquiereGPS.getText()));
+            preparedStatement.setDouble(10, Double.parseDouble(txt_PaqueteAutoDescuentoGeneral.getText()));
+            // Ejecutar la inserción
+            int filasAfectadas = preparedStatement.executeUpdate();
+
+            if (filasAfectadas > 0) {
+                System.out.println("Inserción exitosa");
+            } else {
+                System.out.println("La inserción no tuvo éxito");
+            }
+        } catch (SQLException | NumberFormatException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    void PaqueteAutoBuscar(ActionEvent event) {
+    	String sql = "SELECT * FROM PaqueteAuto WHERE idPaqueteT=? AND idAutomovil=?";
+        try (PreparedStatement preparedStatement = con.prepareStatement(sql)) {
+            // Establecer los valores de los parámetros
+            preparedStatement.setInt(1, Integer.parseInt(txt_PaqueteAutoPaqueteId.getText()));
+            preparedStatement.setInt(2, Integer.parseInt(txt_PaqueteAutoAutoId.getText()));
+
+            // Ejecutar la consulta
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            // Verificar si se encontró el paquete auto
+            if (resultSet.next()) {
+                // Obtener los valores de las columnas
+                txt_PaqueteAutoCiudadPickUp.setText(resultSet.getString("ciudadPickUp"));
+                txt_PaqueteAutoFechaPickUp.setText(resultSet.getString("fechaPickUp"));
+                txt_PaqueteAutoFechaEntrega.setText(resultSet.getString("fechaEntrega"));
+                txt_PaqueteAutoPRecioDiaRetraso.setText(resultSet.getString("precioDiaRetraso"));
+                txt_PaqueteAutoPreciaDia.setText(resultSet.getString("precioDia"));
+                txt_PaqueteAutoAsquiereSeguro.setText(resultSet.getString("adquiereSeguro"));
+                txt_PaqueteAutoAsquiereGPS.setText(resultSet.getString("adquiereGPS"));
+                txt_PaqueteAutoDescuentoGeneral.setText(resultSet.getString("descuentoGeneral"));
+
+                System.out.println("Paquete Auto encontrado y valores llenados en campos.");
+            } else {
+                System.out.println("Paquete Auto no encontrado para el idPaqueteT e idAutomovil proporcionados.");
+            }
+        } catch (SQLException | NumberFormatException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    @FXML
+    void PaqueteAutoActualizar(ActionEvent event) {
+    	String sql = "UPDATE PaqueteAuto SET ciudadPickUp=?, fechaPickUp=?, fechaEntrega=?, " +
+                "precioDiaRetraso=?, precioDia=?, adquiereSeguro=?, adquiereGPS=?, descuentoGeneral=? " +
+                "WHERE idPaqueteT=? AND idAutomovil=?";
+
+        try (PreparedStatement preparedStatement = con.prepareStatement(sql)) {
+            // Establecer los valores de los parámetros
+            preparedStatement.setString(1, txt_PaqueteAutoCiudadPickUp.getText());
+            preparedStatement.setString(2, txt_PaqueteAutoFechaPickUp.getText());
+            preparedStatement.setString(3, txt_PaqueteAutoFechaEntrega.getText());
+            preparedStatement.setString(4, txt_PaqueteAutoPRecioDiaRetraso.getText());
+            preparedStatement.setString(5, txt_PaqueteAutoPreciaDia.getText());
+            preparedStatement.setString(6, txt_PaqueteAutoAsquiereSeguro.getText());
+            preparedStatement.setString(7, txt_PaqueteAutoAsquiereGPS.getText());
+            preparedStatement.setString(8, txt_PaqueteAutoDescuentoGeneral.getText());
+            preparedStatement.setInt(9, Integer.parseInt(txt_PaqueteAutoPaqueteId.getText()));
+            preparedStatement.setInt(10, Integer.parseInt(txt_PaqueteAutoAutoId.getText()));
+
+            // Ejecutar la actualización
+            int filasAfectadas = preparedStatement.executeUpdate();
+
+            if (filasAfectadas > 0) {
+                System.out.println("Actualización exitosa");
+            } else {
+                System.out.println("La actualización no tuvo éxito");
+            }
+        } catch (SQLException | NumberFormatException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    void PaqueteAutoEliminar(ActionEvent event) {
+    	String sql = "DELETE FROM PaqueteAuto WHERE idPaqueteT=? AND idAutomovil=?";
+        try (PreparedStatement preparedStatement = con.prepareStatement(sql)) {
+            preparedStatement.setInt(1, Integer.parseInt(txt_PaqueteAutoPaqueteId.getText()));
+            preparedStatement.setInt(2, Integer.parseInt(txt_PaqueteAutoAutoId.getText()));
+            int filasAfectadas = preparedStatement.executeUpdate();
+            if (filasAfectadas > 0) {
+                System.out.println("Eliminación exitosa");
+            } else {
+                System.out.println("La eliminación no tuvo éxito");
+            }
+        } catch (SQLException | NumberFormatException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    //***********************************************************************************************************************************************************************************************************************
+    //***********************************************************************************************************************************************************************************************************************
     //****************************************************************************************************************************************************************************************************
     //***********************************************************************************************************************************************************************************************************************
     //***********************************************************************************************************************************************************************************************************************
+
+    @FXML
+    void PaqueteTuristicoHabitacionCrear(ActionEvent event) {
+    	 String sql = "INSERT INTO PaqueteTuristicoHabitacion (idPaqueteT, idHabitacion, fechaInicio, fechaFin, descripcion, regimen) VALUES (?, ?, ?, ?, ?, ?)";
+
+         try (PreparedStatement preparedStatement = con.prepareStatement(sql)) {
+             // Establecer los valores de los parámetros
+             preparedStatement.setInt(1, Integer.parseInt(txt_PaqueteTuristicoHabitacionId.getText()));
+             preparedStatement.setInt(2, Integer.parseInt(txt_PaqueteTuristicoHabitacionHabitacionId.getText()));
+             preparedStatement.setString(3, txt_PaqueteTuristicoHabitacionFechaInicio.getText());
+             preparedStatement.setString(4, txt_PaqueteTuristicoHabitacionFechaFin.getText());
+             preparedStatement.setString(5, txt_PaqueteTuristicoHabitacionDescripcion.getText());
+             preparedStatement.setString(6, txt_PaqueteTuristicoHabitacionRegimen.getText());
+
+             // Ejecutar la inserción
+             int filasAfectadas = preparedStatement.executeUpdate();
+
+             if (filasAfectadas > 0) {
+                 System.out.println("Inserción exitosa");
+             } else {
+                 System.out.println("La inserción no tuvo éxito");
+             }
+         } catch (SQLException | NumberFormatException e) {
+             e.printStackTrace();
+         }
+    }
+
+    @FXML
+    void PaqueteTuristicoHabitacionBuscar(ActionEvent event) {
+    	String sql = "SELECT * FROM PaqueteTuristicoHabitacion WHERE idPaqueteT = ? AND idHabitacion = ?";
+        try (PreparedStatement preparedStatement = con.prepareStatement(sql)) {
+            preparedStatement.setInt(1, Integer.parseInt(txt_PaqueteTuristicoHabitacionId.getText()));
+            preparedStatement.setInt(2, Integer.parseInt(txt_PaqueteTuristicoHabitacionHabitacionId.getText()));
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                String fechaInicio = resultSet.getString("fechaInicio");
+                String fechaFin = resultSet.getString("fechaFin");
+                String descripcion = resultSet.getString("descripcion");
+                String regimen = resultSet.getString("regimen");
+
+                txt_PaqueteTuristicoHabitacionFechaInicio.setText(fechaInicio);
+                txt_PaqueteTuristicoHabitacionFechaFin.setText(fechaFin);
+                txt_PaqueteTuristicoHabitacionDescripcion.setText(descripcion);
+                txt_PaqueteTuristicoHabitacionRegimen.setText(regimen);
+                System.out.println("Registro encontrado y valores llenados en campos.");
+            } else {
+                System.out.println("Registro no encontrado para los IDs proporcionados.");
+            }
+        } catch (SQLException | NumberFormatException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    @FXML
+    void PaqueteTuristicoHabitacionActualizar(ActionEvent event) {
+    	String sql = "UPDATE PaqueteTuristicoHabitacion SET fechaInicio=?, fechaFin=?, descripcion=?, regimen=? " +
+                "WHERE idPaqueteT=? AND idHabitacion=?";
+	   try (PreparedStatement preparedStatement = con.prepareStatement(sql)) {
+	       preparedStatement.setString(1, txt_PaqueteTuristicoHabitacionFechaInicio.getText());
+	       preparedStatement.setString(2, txt_PaqueteTuristicoHabitacionFechaFin.getText());
+	       preparedStatement.setString(3, txt_PaqueteTuristicoHabitacionDescripcion.getText());
+	       preparedStatement.setString(4, txt_PaqueteTuristicoHabitacionRegimen.getText());
+	       preparedStatement.setInt(5, Integer.parseInt(txt_PaqueteTuristicoHabitacionId.getText()));
+	       preparedStatement.setInt(6, Integer.parseInt(txt_PaqueteTuristicoHabitacionHabitacionId.getText()));
+	       int filasAfectadas = preparedStatement.executeUpdate();
+	       if (filasAfectadas > 0) {
+	           System.out.println("Actualización exitosa");
+	       } else {
+	           System.out.println("La actualización no tuvo éxito");
+	       }
+	   } catch (SQLException | NumberFormatException e) {
+	       e.printStackTrace();
+	   }
+    }
+
+    @FXML
+    void PaqueteTuristicoHabitacionEliminar(ActionEvent event) {
+    	String sql = "DELETE FROM PaqueteTuristicoHabitacion WHERE idPaqueteT=? AND idHabitacion=?";
+        try (PreparedStatement preparedStatement = con.prepareStatement(sql)) {
+            preparedStatement.setInt(1, Integer.parseInt(txt_PaqueteTuristicoHabitacionId.getText()));
+            preparedStatement.setInt(2, Integer.parseInt(txt_PaqueteTuristicoHabitacionHabitacionId.getText()));
+            int filasAfectadas = preparedStatement.executeUpdate();
+            if (filasAfectadas > 0) {
+                System.out.println("Eliminación exitosa");
+            } else {
+                System.out.println("La eliminación no tuvo éxito");
+            }
+        } catch (SQLException | NumberFormatException e) {
+            e.printStackTrace();
+        }
+    }
+
+    //***********************************************************************************************************************************************************************************************************************
+    //***********************************************************************************************************************************************************************************************************************
+    //**********************************ARTICULOCATEGORIA*****************************************************************************************************************************************************
+    //***********************************************************************************************************************************************************************************************************************
+    //***********************************************************************************************************************************************************************************************************************
+
+    @FXML
+    void ArticuloCategoriaCrear(ActionEvent event) {
+    	 String sql = "INSERT INTO ArticuloCategoria (idArticulo, idCategoria, clasificacion, descripcion) VALUES (?, ?, ?, ?)";
+         try (PreparedStatement preparedStatement = con.prepareStatement(sql)) {
+             preparedStatement.setInt(1, Integer.parseInt(txt_ArticuloCategoriArticuloID.getText()));
+             preparedStatement.setInt(2, Integer.parseInt(txt_ArticuloCategoriaId.getText()));
+             preparedStatement.setString(3, txt_ArticuloCategoriaCalificacion.getText());
+             preparedStatement.setString(4, txt_ArticuloCategoriaDescripcion.getText());
+             int filasAfectadas = preparedStatement.executeUpdate();
+             if (filasAfectadas > 0) {
+                 System.out.println("Inserción exitosa");
+             } else {
+                 System.out.println("La inserción no tuvo éxito");
+             }
+         } catch (SQLException | NumberFormatException e) {
+             e.printStackTrace();
+         }
+    }
+    
+    @FXML
+    void ArticuloCategoriaBuscar(ActionEvent event) {
+    	String sql = "SELECT * FROM ArticuloCategoria WHERE idArticulo = ? AND idCategoria = ?";
+        try (PreparedStatement preparedStatement = con.prepareStatement(sql)) {
+            preparedStatement.setInt(1, Integer.parseInt(txt_ArticuloCategoriArticuloID.getText()));
+            preparedStatement.setInt(2, Integer.parseInt(txt_ArticuloCategoriaId.getText()));
+            ResultSet resultSet = preparedStatement.executeQuery();
+            if (resultSet.next()) {
+                String clasificacion = resultSet.getString("clasificacion");
+                String descripcion = resultSet.getString("descripcion");
+                txt_ArticuloCategoriaCalificacion.setText(clasificacion);
+                txt_ArticuloCategoriaDescripcion.setText(descripcion);
+                System.out.println("ArticuloCategoria encontrada y valores llenados en campos.");
+            } else {
+                System.out.println("ArticuloCategoria no encontrada para el idArticulo y idCategoria proporcionados.");
+            }
+        } catch (SQLException | NumberFormatException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    @FXML
+    void ArticuloCategoriaActualizar(ActionEvent event) {
+    	String sql = "UPDATE ArticuloCategoria SET clasificacion=?, descripcion=? WHERE idArticulo=? AND idCategoria=?";
+        try (PreparedStatement preparedStatement = con.prepareStatement(sql)) {
+            preparedStatement.setString(1, txt_ArticuloCategoriaCalificacion.getText());
+            preparedStatement.setString(2, txt_ArticuloCategoriaDescripcion.getText());
+            preparedStatement.setInt(3, Integer.parseInt(txt_ArticuloCategoriArticuloID.getText()));
+            preparedStatement.setInt(4, Integer.parseInt(txt_ArticuloCategoriaId.getText()));
+            int filasAfectadas = preparedStatement.executeUpdate();
+            if (filasAfectadas > 0) {
+                System.out.println("Actualización exitosa");
+            } else {
+                System.out.println("La actualización no tuvo éxito");
+            }
+        } catch (SQLException | NumberFormatException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    void ArticuloCategoriaEliminar(ActionEvent event) {
+    	String sql = "DELETE FROM ArticuloCategoria WHERE idArticulo=? AND idCategoria=?";
+        try (PreparedStatement preparedStatement = con.prepareStatement(sql)) {
+            preparedStatement.setInt(1, Integer.parseInt(txt_ArticuloCategoriArticuloID.getText()));
+            preparedStatement.setInt(2, Integer.parseInt(txt_ArticuloCategoriaId.getText()));
+            int filasAfectadas = preparedStatement.executeUpdate();
+            if (filasAfectadas > 0) {
+                System.out.println("Eliminación exitosa");
+            } else {
+                System.out.println("La eliminación no tuvo éxito");
+            }
+        } catch (SQLException | NumberFormatException e) {
+            e.printStackTrace();
+        }
+    }
+
+    //***********************************************************************************************************************************************************************************************************************
+    //***********************************************************************************************************************************************************************************************************************
+    //****************************************************************************************************************************************************************************************************
+    //***********************************************************************************************************************************************************************************************************************
+    //***********************************************************************************************************************************************************************************************************************
+
     
 }
