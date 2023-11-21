@@ -1,16 +1,163 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="796.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controladores.ClienteControler">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="796.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controladores.ClienteControler">
    <children>
+      <AnchorPane layoutX="11.0" layoutY="51.0" prefHeight="469.0" prefWidth="741.0" />
       <TabPane layoutY="7.0" prefHeight="542.0" prefWidth="796.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
-          <Tab text="Untitled Tab 1" />
-          <Tab text="Untitled Tab 2" />
-        </tabs>
+          <Tab text="inicio">
+               <content>
+                  <AnchorPane prefHeight="513.0" prefWidth="722.0" />
+               </content>
+            </Tab>
+            <Tab text="Reservas">
+               <content>
+                  <AnchorPane prefHeight="513.0" prefWidth="722.0">
+                     <children>
+                        <Label fx:id="lb_idPersona" layoutX="48.0" layoutY="92.0" text="Id Persona" />
+                        <TextField fx:id="txt_idPersona" layoutX="40.0" layoutY="128.0" mouseTransparent="true" opacity="0.9" prefHeight="29.0" prefWidth="82.0" style="-fx-border-color: black;" />
+                        <Label fx:id="lb_idReserva" layoutX="174.0" layoutY="92.0" text="Id reserva" />
+                        <Label fx:id="lb_feshaSolictud" layoutX="316.0" layoutY="92.0" text="Fecha solicitud" />
+                        <Button fx:id="bt_buscar" layoutX="382.0" layoutY="226.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="73.0" text="Buscar" />
+                        <TextField fx:id="txt_idreserva" layoutX="174.0" layoutY="128.0" mouseTransparent="true" opacity="0.9" prefHeight="29.0" prefWidth="86.0" style="-fx-border-color: black;" />
+                        <TextField fx:id="txt_fechaSolicitud" layoutX="316.0" layoutY="128.0" mouseTransparent="true" opacity="0.9" prefHeight="29.0" prefWidth="103.0" style="-fx-border-color: black;" />
+                        <Label fx:id="lb_fechaViaje" layoutX="479.0" layoutY="92.0" text="Fecha viaje" />
+                        <TextField fx:id="txt_fechaViaje" layoutX="479.0" layoutY="128.0" mouseTransparent="true" opacity="0.9" prefHeight="29.0" prefWidth="103.0" style="-fx-border-color: black;" />
+                        <Label fx:id="lb_idPaquete" layoutX="40.0" layoutY="190.0" text="Id Paquete" />
+                        <TextField fx:id="txt_idPaquete" layoutX="39.0" layoutY="227.0" mouseTransparent="true" opacity="0.9" prefHeight="29.0" prefWidth="82.0" style="-fx-border-color: black;" />
+                        <Label fx:id="lb_estado" layoutX="171.0" layoutY="190.0" text="Id Paquete" />
+                        <TextField fx:id="txt_estado" layoutX="162.0" layoutY="227.0" mouseTransparent="true" opacity="0.9" prefHeight="29.0" prefWidth="82.0" style="-fx-border-color: black;" />
+                        <Button fx:id="bt_actualizar" layoutX="474.0" layoutY="225.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="75.0" text="Actualizar" />
+                        <Button fx:id="bt_eliminar" layoutX="564.0" layoutY="225.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="85.0" text="Eliminar" />
+                        <Button fx:id="bt_reservar" layoutX="294.0" layoutY="226.0" mnemonicParsing="false" text="Crear" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Reserva Automovil">
+               <content>
+                  <AnchorPane prefHeight="513.0" prefWidth="722.0">
+                     <children>
+                        <Label layoutX="32.0" layoutY="35.0" text="Id reserva" />
+                        <Label layoutX="32.0" layoutY="91.0" text="Id auto" />
+                        <Label layoutX="32.0" layoutY="145.0" text="ciudad pickup" />
+                        <Label layoutX="35.0" layoutY="205.0" text="fecha pickup" />
+                        <Label layoutX="32.0" layoutY="268.0" text="fecha entrega" />
+                        <Label layoutX="32.0" layoutY="326.0" text="valor dia retraso" />
+                        <TextField fx:id="txt_idReserva" layoutX="128.0" layoutY="31.0" prefHeight="25.0" prefWidth="125.0" />
+                        <TextField fx:id="txt_idAuto" layoutX="129.0" layoutY="87.0" prefHeight="25.0" prefWidth="127.0" />
+                        <TextField fx:id="txt_ciudadPickup" layoutX="131.0" layoutY="141.0" prefHeight="25.0" prefWidth="127.0" />
+                        <TextField fx:id="txt_fechaPickup" layoutX="131.0" layoutY="201.0" prefHeight="25.0" prefWidth="127.0" />
+                        <TextField fx:id="txt_fechaEntrega" layoutX="131.0" layoutY="264.0" prefHeight="25.0" prefWidth="127.0" />
+                        <TextField fx:id="txt_precioDiaRetraso" layoutX="146.0" layoutY="322.0" prefHeight="25.0" prefWidth="127.0" />
+                        <Label layoutX="342.0" layoutY="35.0" text="valor dia" />
+                        <Label layoutX="342.0" layoutY="91.0" text="seguro" />
+                        <Label layoutX="342.0" layoutY="145.0" text="gps" />
+                        <Label layoutX="345.0" layoutY="205.0" text="descuento" />
+                        <Label layoutX="342.0" layoutY="268.0" text="total pagar" />
+                        <Label layoutX="342.0" layoutY="326.0" text="estado" />
+                        <TextField fx:id="txt_precioDia" layoutX="438.0" layoutY="31.0" prefHeight="25.0" prefWidth="125.0" />
+                        <TextField fx:id="txt_adquiereSeguro" layoutX="439.0" layoutY="87.0" prefHeight="25.0" prefWidth="127.0" />
+                        <TextField fx:id="txt_adquiereGps" layoutX="441.0" layoutY="141.0" prefHeight="25.0" prefWidth="127.0" />
+                        <TextField fx:id="txt_descuentoGeneral" layoutX="441.0" layoutY="201.0" prefHeight="25.0" prefWidth="127.0" />
+                        <TextField fx:id="txt_total" layoutX="441.0" layoutY="264.0" prefHeight="25.0" prefWidth="127.0" />
+                        <TextField fx:id="txt_estadoAuto" layoutX="456.0" layoutY="322.0" prefHeight="25.0" prefWidth="127.0" />
+                        <Button fx:id="bt_reservarAuto" layoutX="65.0" layoutY="389.0" mnemonicParsing="false" text="Reservar" />
+                        <Button fx:id="bt_buscarAuto" layoutX="157.0" layoutY="389.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="69.0" text="Buscar" />
+                        <Button fx:id="bt_actualizarAuto" layoutX="253.0" layoutY="389.0" mnemonicParsing="false" text="Actualizar" />
+                        <Button fx:id="bt_eliminarAuto" layoutX="352.0" layoutY="389.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="84.0" text="Eliminar" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Reserva Habitación">
+               <content>
+                  <AnchorPane prefHeight="513.0" prefWidth="722.0">
+                     <children>
+                        <Label layoutX="60.0" layoutY="60.0" text="id reserva" />
+                        <Label layoutX="59.0" layoutY="123.0" text="id habitacion" />
+                        <Label layoutX="63.0" layoutY="183.0" text="fecha inicio" />
+                        <Label layoutX="63.0" layoutY="238.0" text="fecha fin" />
+                        <Label layoutX="62.0" layoutY="297.0" text="descripcion" />
+                        <Label layoutX="65.0" layoutY="363.0" text="regimen" />
+                        <TextField fx:id="txt_idReservaHab" layoutX="168.0" layoutY="56.0" />
+                        <TextField fx:id="txt_idHab" layoutX="168.0" layoutY="119.0" />
+                        <TextField fx:id="txt_fechaInicio" layoutX="161.0" layoutY="179.0" />
+                        <TextField fx:id="txt_fechaFin" layoutX="161.0" layoutY="234.0" />
+                        <TextField fx:id="txt_descripcion" layoutX="161.0" layoutY="293.0" />
+                        <TextField fx:id="txt_regimen" layoutX="161.0" layoutY="359.0" />
+                        <Button fx:id="bt_buscarHab" layoutX="483.0" layoutY="167.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="73.0" text="Buscar" />
+                        <Button fx:id="bt_actualizarHab" layoutX="483.0" layoutY="231.0" mnemonicParsing="false" text="Actualizar" />
+                        <Button fx:id="bt_eliminarHab" layoutX="483.0" layoutY="302.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="73.0" text="Eliminar" />
+                        <Button fx:id="bt_reservarHab" layoutX="483.0" layoutY="100.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="73.0" text="Reservar" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Detalle venta">
+               <content>
+                  <AnchorPane prefHeight="513.0" prefWidth="722.0">
+                     <children>
+                        <Label layoutX="44.0" layoutY="74.0" text="Id articulo" />
+                        <Label layoutX="45.0" layoutY="192.0" text="descripcion" />
+                        <Label layoutX="25.0" layoutY="251.0" text="descuento general" />
+                        <Label layoutX="33.0" layoutY="376.0" text="fecha fin descuento" />
+                        <Label layoutX="417.0" layoutY="74.0" text="fecha compra" />
+                        <Label layoutX="382.0" layoutY="126.0" text="cantidad comprada" />
+                        <Label layoutX="458.0" layoutY="260.0" text="estado" />
+                        <Label layoutX="45.0" layoutY="126.0" text="id venta" />
+                        <Label layoutX="25.0" layoutY="305.0" text="fecha inicio descuento" />
+                        <Label layoutX="469.0" layoutY="192.0" text="total" />
+                        <TextField fx:id="txt_idArticuloDetalleventa" layoutX="149.0" layoutY="70.0" />
+                        <TextField fx:id="txt_idVentaDetalleVenta" layoutX="149.0" layoutY="122.0" />
+                        <TextField fx:id="txt_descripcionDetalleVenta" layoutX="149.0" layoutY="188.0" />
+                        <TextField fx:id="txt_dtoGenDetalleVenta" layoutX="158.0" layoutY="247.0" />
+                        <TextField fx:id="txt_fechaInicioDtoDetalleVenta" layoutX="173.0" layoutY="310.0" />
+                        <TextField fx:id="txt_finDtoDetalleVenta" layoutX="173.0" layoutY="372.0" />
+                        <TextField fx:id="txt_fechaCompraDetalleVenta" layoutX="520.0" layoutY="58.0" />
+                        <TextField fx:id="txt_cantCompraDetalleVenta" layoutX="521.0" layoutY="123.0" />
+                        <TextField fx:id="txt_totalDetalleVenta" layoutX="520.0" layoutY="189.0" />
+                        <TextField fx:id="txt_estadoDetalleVenta" layoutX="522.0" layoutY="257.0" />
+                        <Button fx:id="bt_crearDetalleVenta" layoutX="98.0" layoutY="424.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="77.0" text="Crear" />
+                        <Button fx:id="bt_buscarDetalleVenta" layoutX="231.0" layoutY="424.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="81.0" text="Buscar" />
+                        <Button fx:id="bt_actualizarDetalleVenta" layoutX="371.0" layoutY="424.0" mnemonicParsing="false" text="Actualizar" />
+                        <Button fx:id="bt_eliminarDetalleVenta" layoutX="522.0" layoutY="424.0" mnemonicParsing="false" text="Eliminar" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Venta">
+               <content>
+                  <AnchorPane prefHeight="513.0" prefWidth="722.0">
+                     <children>
+                        <Label layoutX="83.0" layoutY="62.0" text="Id venta" />
+                        <Label layoutX="69.0" layoutY="117.0" text="Id persona" />
+                        <Label layoutX="89.0" layoutY="172.0" text="Fecha" />
+                        <Label layoutX="72.0" layoutY="224.0" text="Impuesto" />
+                        <Label layoutX="40.0" layoutY="276.0" text="Precio unitario" />
+                        <Label layoutX="86.0" layoutY="329.0" text="Estado" />
+                        <TextField fx:id="txt_idVenta" layoutX="164.0" layoutY="58.0" />
+                        <TextField fx:id="txt_idPersona" layoutX="165.0" layoutY="114.0" />
+                        <TextField fx:id="txt_fechaVenta" layoutX="166.0" layoutY="169.0" />
+                        <TextField fx:id="txt_impuestoVenta" layoutX="165.0" layoutY="221.0" />
+                        <TextField fx:id="txt_precioUnVenta" layoutX="165.0" layoutY="273.0" />
+                        <TextField fx:id="txt_estadoVenta" layoutX="165.0" layoutY="326.0" />
+                        <Button fx:id="bt_crearVenta" layoutX="73.0" layoutY="404.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="79.0" text="Crear" />
+                        <Button fx:id="bt_buscarVenta" layoutX="224.0" layoutY="404.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="81.0" text="Buscar" />
+                        <Button fx:id="bt_actualizarVenta" layoutX="383.0" layoutY="404.0" mnemonicParsing="false" text="Actualizar" />
+                        <Button fx:id="bt_eliminarVenta" layoutX="534.0" layoutY="404.0" mnemonicParsing="false" text="Eliminar" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>     
+           </tabs>
       </TabPane>
    </children>
 </AnchorPane>

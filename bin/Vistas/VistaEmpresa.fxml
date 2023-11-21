@@ -20,6 +20,27 @@
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
                   </content>
                 </Tab>
+                  <Tab text="ArticuloCategoria">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="372.0" layoutY="65.0" text="ArticuloCategoria" />
+                              <Label layoutX="180.0" layoutY="127.0" text="idArticulo" />
+                              <Label layoutX="518.0" layoutY="127.0" text="idCategoria" />
+                              <Label layoutX="180.0" layoutY="184.0" text="clasificacion" />
+                              <Label layoutX="518.0" layoutY="184.0" text="descripcion" />
+                              <Button fx:id="btn_ArticuloCategoriaCrear" layoutX="292.0" layoutY="274.0" mnemonicParsing="false" onAction="#ArticuloCategoriaCrear" text="Crear" />
+                              <Button fx:id="btn_ArticuloCategoriaBuscar" layoutX="372.0" layoutY="274.0" mnemonicParsing="false" onAction="#ArticuloCategoriaBuscar" text="Buscar" />
+                              <Button fx:id="btn_ArticuloCategoriaActualizar" layoutX="465.0" layoutY="274.0" mnemonicParsing="false" onAction="#ArticuloCategoriaActualizar" text="Actualizar" />
+                              <Button fx:id="btn_ArticuloCategoriaEliminar" layoutX="564.0" layoutY="274.0" mnemonicParsing="false" onAction="#ArticuloCategoriaEliminar" text="Eliminar" />
+                              <TextField fx:id="txt_ArticuloCategoriArticuloID" layoutX="284.0" layoutY="123.0" />
+                              <TextField fx:id="txt_ArticuloCategoriaCalificacion" layoutX="284.0" layoutY="180.0" />
+                              <TextField fx:id="txt_ArticuloCategoriaId" layoutX="623.0" layoutY="123.0" />
+                              <TextField fx:id="txt_ArticuloCategoriaDescripcion" layoutX="623.0" layoutY="180.0" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
                   <Tab text="PaqueteAuto">
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">

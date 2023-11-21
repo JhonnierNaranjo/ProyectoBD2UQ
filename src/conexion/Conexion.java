@@ -9,8 +9,8 @@ public class Conexion {
 
 	private static final String driver = "oracle.jdbc.driver.OracleDriver";
 	private static final String URL = "jdbc:oracle:thin:@localhost:1521:XE";//XE
-	private static final String USERNAME = "PROYECTOBD2";
-	private static final String PASSWORD = "root";
+	private static final String USERNAME = "C##MANAGER";
+	private static final String PASSWORD = "123456";
 
 	public Conexion() {
 
@@ -42,7 +42,7 @@ public class Conexion {
             }
         } catch (SQLException e) {
             e.printStackTrace();
-            // Manejar el error según tus necesidades
+            // Manejar el error segï¿½n tus necesidades
         }
     }
 
